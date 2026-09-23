@@ -1,0 +1,179 @@
+\documentclass[letterpaper]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+    \makebox[0.90\textwidth]{Name:\enspace\hrulefill \quad Date:\enspace\hrulefill}
+
+    \noindent Hello, this is a mock exam for studying for the \textbf{quiz} that will be on 9/25/2026 for \textbf{MTH 181-03: Discrete Mathematics I}. As a reminder, you may share this document with others since you're helping spread learning, but please credit me for making this, since I'm making this in my very limited free time. Good luck studying.
+    
+    \textbf{Note}: Have an understanding in \textbf{Sets 1.1 \& 1.2}, but please try to focus more on \textbf{Set 2.1} for the upcoming quiz.
+    
+    \noindent{\textbf{Set 2.1}}
+    
+    \begin{questions}
+        
+        \question Provide an \textbf{example} of each of the laws we have learned. Please remember the following:
+
+        Let $p$, $q$, and $r$ be statement variables.
+
+        Let $t$ represent a \textbf{tautology}.
+
+        Let $c$ represent a \textbf{contradiction}.
+
+        \begin{parts}
+            \part Commutative laws:         \hrulefill
+            \part Associative laws:         \hrulefill
+            \part Distributive laws:        \hrulefill
+            \part Identity laws:            \hrulefill
+            \part Negation laws:            \hrulefill
+            \part Double negative law:      \hrulefill
+            \part Idempotent laws:          \hrulefill
+            \part Universal bound laws:     \hrulefill
+            \part De Morgan’s laws:         \hrulefill
+            \part Absorption laws:          \hrulefill
+            \part Negations of $t$ and $c$: \hrulefill
+        \end{parts}
+
+
+
+        
+        \question Argument to Common Form
+
+        \begin{tabular}{l|c}
+            Original Argument & Common Form \\ \hline
+            If I pass this final exam, then I won't be a disappointment to my family. & \hspace{3cm} \\
+            I'm a disappointment to my family. & \\
+            Therefore, it is not the case that I passed my final exam. & \\
+        \end{tabular}
+
+
+
+        
+        \question Make a truth table for the following statement:
+        $\neg (p \lor q) \land (\neg p \land \neg q)$
+        
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+            \hline
+            $p$ & $q$ & $\neg p$ & $\neg q$ & $p \lor q$ & $\neg (p \lor q)$ & $\neg p \land \neg q$ & $\neg (p \lor q) \land (\neg p \land \neg q)$\\ \hline
+            T & T &  &  &  &  &  &\\ \hline
+            T & F &  &  &  &  &  &\\ \hline
+            F & T &  &  &  &  &  &\\ \hline
+            F & F &  &  &  &  &  &\\ \hline
+        \end{tabular}
+
+
+
+        
+        \question Truth Table: Are $(p \land q)$ and $(\neg p \lor \neg q)$ logically equivalent?
+
+        \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            $p$ & $q$ & $\neg p$ & $\neg q$ & $p \land q$& $\neg p \lor \neg q$& $(p \land q) \equiv (\neg p \lor \neg q)$\\ \hline
+            T & T &  &  &  &  &\\ \hline
+            T & F &  &  &  &  &\\ \hline
+            F & T &  &  &  &  &\\ \hline
+            F & F &  &  &  &  &\\ \hline
+        \end{tabular}
+
+        \begin{checkboxes}
+            \choice True
+            \choice False
+        \end{checkboxes}
+
+
+
+        
+        \question Truth Table: Are $(p \lor (q \land r))$ and $(p \lor q)\land(p \lor r)$ logically equivalent?
+
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+            \hline
+            $p$ & $q$ & $r$ & $p \land r$ & $p \lor q$ & $p \lor r$ & $p \lor (q \land r)$ & $(p \lor q)\land(p \lor r)$ & $(p \lor (q \land r)) \equiv (p \lor q)\land(p \lor r)$\\ \hline
+            T & T & T &  &  &  &  &  &  \\ \hline
+            T & T & F &  &  &  &  &  &  \\ \hline
+            T & F & T &  &  &  &  &  &  \\ \hline
+            T & F & F &  &  &  &  &  &  \\ \hline
+            F & T & T &  &  &  &  &  &  \\ \hline
+            F & T & F &  &  &  &  &  &  \\ \hline
+            F & F & T &  &  &  &  &  &  \\ \hline
+            F & F & F &  &  &  &  &  &  \\ \hline
+        \end{tabular}
+        
+        \begin{checkboxes}
+            \choice True
+            \choice False
+        \end{checkboxes}
+
+
+
+        
+        \question Truth Table: Is $p \lor \neg p$ a tautology, a contradiction, or neither?
+
+        \begin{tabular}{|c|c|c|}
+            \hline
+            $p$ & $\neg p$ & $p \lor \neg p$\\ \hline
+             &  &  \\ \hline
+             &  &  \\ \hline
+        \end{tabular}
+
+        \begin{checkboxes}
+            \choice Tautology
+            \choice Contradiction
+            \choice Neither
+        \end{checkboxes}
+
+
+
+        
+        \question Please provide reasoning to prove this logical equivalence.
+
+        $\neg (p \lor q)\land (\neg (\neg p \lor q)) \equiv c$
+
+        %by De Morgan’s laws
+        %by Double negative law
+        %by Commutative laws
+        %by Distributive laws
+        %by Commutative laws
+        %by Negation laws
+        %by Universal bound laws
+        
+        \begin{tabular}{|l|c|}
+            \hline
+            $\equiv (\neg p \land \neg q)\land(\neg(\neg p)\land \neg q)$ & by De Morgan’s laws\hspace{7cm} \\ \hline
+            $\equiv (\neg p \land \neg q)\land(p \land \neg q)$ &  \\ \hline
+            $\equiv (\neg q \land \neg p) \land (\neg q \land p)$ &  \\ \hline
+            $\equiv \neg q \land (\neg p \land p)$ &  \\ \hline
+            $\equiv \neg q \land (p \land \neg p)$ &  \\ \hline
+            $\equiv \neg q \land c$ &  \\ \hline
+            $\equiv c$ & \\ \hline
+        \end{tabular}
+
+
+
+        
+        \question Prove De Morgan's Laws by making a truth table.
+        \begin{parts}
+            \part $\neg (p \land q) \equiv \neg p \lor \neg q$
+            \vspace{\stretch{1}}
+            \part $\neg (p \lor q) \equiv \neg p \land \neg q$
+            \vspace{\stretch{1}}
+        \end{parts}
+
+
+
+
+        \question Rewrite the following inequalities symbolically:
+
+        Let $p="x > -19"$, $q="x < 9"$, $r="x=-19"$, and $s="x=9"$
+        
+        \begin{parts}
+            \part $x \ge -19$
+            
+            \part $-19 < x < 9$
+            
+            \part $-19 \le x < 9$
+
+            \part $-19 \le x \le 9$
+        \end{parts}
+    \end{questions}
+\end{document}
