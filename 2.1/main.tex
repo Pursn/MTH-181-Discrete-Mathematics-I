@@ -1,6 +1,7 @@
 \documentclass[letterpaper]{exam}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[OT1]{fontenc}
 
 \begin{document}
     \makebox[0.90\textwidth]{Name:\enspace\hrulefill \quad Date:\enspace\hrulefill}
@@ -67,13 +68,13 @@
         
         \question Truth Table: Are $(p \land q)$ and $(\neg p \lor \neg q)$ logically equivalent?
 
-        \begin{tabular}{|c|c|c|c|c|c|c|}
+        \begin{tabular}{|c|c|c|c|c|c|}
             \hline
-            $p$ & $q$ & $\neg p$ & $\neg q$ & $p \land q$& $\neg p \lor \neg q$& $(p \land q) \equiv (\neg p \lor \neg q)$\\ \hline
-            T & T &  &  &  &  &\\ \hline
-            T & F &  &  &  &  &\\ \hline
-            F & T &  &  &  &  &\\ \hline
-            F & F &  &  &  &  &\\ \hline
+            $p$ & $q$ & $\neg p$ & $\neg q$ & $p \land q$& $\neg p \lor \neg q$\\ \hline
+            T & T &  &  &  &\\ \hline
+            T & F &  &  &  &\\ \hline
+            F & T &  &  &  &\\ \hline
+            F & F &  &  &  &\\ \hline
         \end{tabular}
 
         \begin{checkboxes}
@@ -86,17 +87,17 @@
         
         \question Truth Table: Are $(p \lor (q \land r))$ and $(p \lor q)\land(p \lor r)$ logically equivalent?
 
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
             \hline
-            $p$ & $q$ & $r$ & $q \land r$ & $p \lor q$ & $p \lor r$ & $p \lor (q \land r)$ & $(p \lor q)\land(p \lor r)$ & $(p \lor (q \land r)) \equiv (p \lor q)\land(p \lor r)$\\ \hline
-            T & T & T &  &  &  &  &  &  \\ \hline
-            T & T & F &  &  &  &  &  &  \\ \hline
-            T & F & T &  &  &  &  &  &  \\ \hline
-            T & F & F &  &  &  &  &  &  \\ \hline
-            F & T & T &  &  &  &  &  &  \\ \hline
-            F & T & F &  &  &  &  &  &  \\ \hline
-            F & F & T &  &  &  &  &  &  \\ \hline
-            F & F & F &  &  &  &  &  &  \\ \hline
+            $p$ & $q$ & $r$ & $q \land r$ & $p \lor q$ & $p \lor r$ & $p \lor (q \land r)$ & $(p \lor q)\land(p \lor r)$\\ \hline
+            T & T & T &  &  &  &  &\\ \hline
+            T & T & F &  &  &  &  &\\ \hline
+            T & F & T &  &  &  &  &\\ \hline
+            T & F & F &  &  &  &  &\\ \hline
+            F & T & T &  &  &  &  &\\ \hline
+            F & T & F &  &  &  &  &\\ \hline
+            F & F & T &  &  &  &  &\\ \hline
+            F & F & F &  &  &  &  &\\ \hline
         \end{tabular}
         
         \begin{checkboxes}
@@ -165,7 +166,10 @@
 
         \question Rewrite the following inequalities symbolically:
 
-        Let $p="x > -19"$, $q="x < 9"$, $r="x=-19"$, and $s="x=9"$
+        Let $p=$\textquotedblleft$x > -19$\textquotedblright,
+        $q=$\textquotedblleft$x < 9$\textquotedblright,
+        $r=$\textquotedblleft$x=-19$\textquotedblright,
+        and $s=$\textquotedblleft$x=9$\textquotedblright
         
         \begin{parts}
             \part $x \ge -19$
