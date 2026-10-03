@@ -1,0 +1,207 @@
+\documentclass[letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[inline]{enumitem} 
+
+\begin{document}
+
+    \noindent \textbf{Answers}:
+
+    
+    \begin{enumerate}
+        \item
+        \begin{enumerate}
+            \item \textbf{Commutative laws}:
+            
+            $p \land q \equiv q \land p$
+            
+            $p \lor q \equiv q \lor p$
+            
+            \item \textbf{Associative laws}:
+            
+            $p \land (q \land r) \equiv (p \land q) \land r$
+
+            $p \lor (q \lor r) \equiv (p \lor q) \lor r$
+            
+            \item \textbf{Distributive laws}:
+            
+            $p \land (q \lor r) \equiv (p \land q)\lor(p \land r)$
+
+            $p \lor (q \land r) \equiv (p \lor q)\land(p \lor r)$
+            
+            \item \textbf{Identity laws}:
+            
+            $p \land t \equiv p$
+
+            $p \lor c \equiv p$
+            
+            \item \textbf{Negation laws}:
+            
+            $p \lor \neg p \equiv t$
+
+            $p \land \neg p \equiv c$
+            
+            \item \textbf{Double negative law}:
+            
+            $\neg(\neg p) \equiv p$
+            
+            \item \textbf{Idempotent laws}:
+            
+            $p \land p \equiv p$
+
+            $p \lor p \equiv p$
+            
+            \item \textbf{Universal bound laws}:
+            
+            $p \lor t \equiv t$
+
+            $p \land c \equiv c$
+            
+            \item \textbf{De Morgan's laws}:
+            
+            $\neg (p \land q) \equiv \neg p \lor \neg q$
+
+            $\neg(p \lor q) \equiv \neg p \land \neg q$
+            
+            \item \textbf{Absorption laws}:
+            
+            $p \land (p \lor q) \equiv p$
+
+            $p \lor (p \land q) \equiv p$
+            
+            \item \textbf{Negations of $t$ and $c$}:
+            
+            $\neg t \equiv c$
+
+            $\neg c \equiv t$
+            
+        \end{enumerate}
+
+        
+        \item The Common Form should look like this.
+        
+       \begin{tabular}{l|l}
+            Original Argument & Common Form \\ \hline
+            If I pass this final exam, then I won't be a disappointment to my family. & $p \implies \neg q$ \\
+            I'm a disappointment to my family. & $q$\\
+            Therefore, it is not the case that I passed my final exam. & $\therefore \neg p$\\
+        \end{tabular}
+
+
+        \item Your truth table should look like this.
+        
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+            \hline
+            $p$ & $q$ & $\neg p$ & $\neg q$ & $p \lor q$ & $\neg (p \lor q)$ & $\neg p \land \neg q$ & $\neg (p \lor q) \land (\neg p \land \neg q)$\\ \hline
+            T & T & F & F & T & F & F & F \\ \hline
+            T & F & F & T & T & F & F & F \\ \hline
+            F & T & T & F & T & F & F & F \\ \hline
+            F & F & T & T & F & T & T & T \\ \hline
+        \end{tabular}
+
+
+        \item Is it logically equivalent?
+        
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            $p$ & $q$ & $\neg p$ & $\neg q$ & $p \land q$& $\neg p \lor \neg q$\\ \hline
+            T & T & F & F & T & F \\ \hline
+            T & F & F & T & F & T \\ \hline
+            F & T & T & F & F & T \\ \hline
+            F & F & T & T & F & T \\ \hline
+        \end{tabular}
+
+        \textbf{False}
+
+
+        \item Is it logically equivalent?
+        
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+            \hline
+            $p$ & $q$ & $r$ & $q \land r$ & $p \lor q$ & $p \lor r$ & $p \lor (q \land r)$ & $(p \lor q)\land(p \lor r)$\\ \hline
+            T & T & T & T & T & T & T & T \\ \hline
+            T & T & F & F & T & T & T & T \\ \hline
+            T & F & T & F & T & T & T & T \\ \hline
+            T & F & F & F & T & T & T & T \\ \hline
+            F & T & T & T & T & T & T & T \\ \hline
+            F & T & F & F & T & F & F & F \\ \hline
+            F & F & T & F & F & T & F & F \\ \hline
+            F & F & F & F & F & F & F & F \\ \hline
+        \end{tabular}
+
+        \textbf{True}
+
+        \item Truth Table
+
+        \begin{tabular}{|c|c|c|}
+            \hline
+            $p$ & $\neg p$ & $p \lor \neg p$\\ \hline
+            T & F & T \\ \hline
+            F & T & T \\ \hline
+        \end{tabular}
+
+        \textbf{Tautology}
+
+        \item $\neg (p \lor q)\land (\neg (\neg p \lor q)) \equiv c$
+
+        %by De Morgan’s laws
+        %by Double negative law
+        %by Commutative laws
+        %by Distributive laws
+        %by Commutative laws
+        %by Negation laws
+        %by Universal bound laws
+        
+        \begin{tabular}{|l|l|}
+            \hline
+            $\equiv (\neg p \land \neg q)\land(\neg(\neg p)\land \neg q)$ & by De Morgan’s laws \\ \hline
+            $\equiv (\neg p \land \neg q)\land(p \land \neg q)$ & by Double negative law \\ \hline
+            $\equiv (\neg q \land \neg p) \land (\neg q \land p)$ & by Commutative laws \\ \hline
+            $\equiv \neg q \land (\neg p \land p)$ & by Distributive laws \\ \hline
+            $\equiv \neg q \land (p \land \neg p)$ & by Commutative laws \\ \hline
+            $\equiv \neg q \land c$ & by Negation laws \\ \hline
+            $\equiv c$ & by Universal bound laws \\ \hline
+        \end{tabular}
+        
+        \item Prove De Morgan's Laws by making a truth table.
+        
+        \begin{enumerate}
+            \item $\neg (p \land q)\equiv \neg p \lor q$
+
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $\neg p$ & $\neg q$ & $p \land q$ & $\neg(p \land q)$ & $\neg p \lor \neg q$ \\ \hline
+                T & T & F & F &  T&  F&  F\\ \hline
+                T & F & F & T &  F&  T&  T\\ \hline
+                F & T & T & F &  F&  T&  T\\ \hline
+                F & F & T & T &  F&  T&  T\\ \hline
+            \end{tabular}
+            
+            \item $\neg (p \lor q) \equiv \neg p \land \neg q$
+
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+                \hline
+                $p$ & $q$ & $\neg p$ & $\neg q$ & $p \lor q$ & $\neg(p \lor q)$ & $\neg p \land \neg q$ \\ \hline
+                T & T & F & F & T & F & F\\ \hline
+                T & F & F & T & T & F & F\\ \hline
+                F & T & T & F & T & F & F\\ \hline
+                F & F & T & T & F & T & T\\ \hline
+            \end{tabular}
+
+            
+        \end{enumerate}
+
+        \item Rewrite to this:
+
+        \begin{enumerate*}[itemjoin={\hspace{2cm}}]
+            \item $p \lor r$
+            \item $p \land q$
+            \item $(p \lor r) \land q$
+            \item $(p \lor r)\land(q \lor s)$
+        \end{enumerate*}
+        
+    \end{enumerate}
+
+    
+\end{document}
